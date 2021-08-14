@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url(https://cdn.glitch.com/e9ac980a-9531-4dc6-b9c9-b9fc582ade81%2Fwallpaper.jpg?v=1590887233617);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.forms {
+  width: 350px;
+  margin: auto;
+}
+
+.login {
+  position: fixed;
+  max-width: 350px;
+  height: 400px;
+  top: 10%;
+  left: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff6f8;
+  border: solid 1px pink;
+  border-radius: 80px;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.register {
+  position: fixed;
+  max-width: 350px;
+  height: 400px;
+  top: 10%;
+  left: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff6f8;
+  border: solid 1px pink;
+  border-radius: 80px;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+input {
+  width: 300px;
+  font-size: 16px;
+  margin: 10px;
+  padding: 8px;
+  outline: 1;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.logo{
+  width: 130px;
+  margin-top: 5px;
+  border: solid 2px pink;
+}

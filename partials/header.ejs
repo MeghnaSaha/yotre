@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/SiteHeader.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <img class="logo" src="https://cdn.glitch.com/e9ac980a-9531-4dc6-b9c9-b9fc582ade81%2Fyotrelogo.jpg?v=1591005949816" alt="Yotre Logo">
+    <div class="options" onmouseover="openMenu()">
+      <p>Options</p>
+    </div>
+    <div class="menu" id="menu" onmouseleave="closeMenu()">
+      <p> <a href="/feed?user=<%=username%>"> Play Dress Up </a></p>
+      <p> <a href="#"> Update Preferences </a></p>
+      <p> <a href="/wardrobe?user=<%=username%>"> Update your Wardrobe </a></p>
+      <p> <a href="/"> Not <%= username %>? </a></p>
+    </div>
+    
+    <script>
+      function openMenu(){
+        console.log("hi");
+        document.getElementById("menu").style.display="flex";
+      }
+      function closeMenu(){
+        document.getElementById("menu").style.display="none";
+      }
+      </script>
+    
+  </body>
+</html>

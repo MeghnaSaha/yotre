@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-shadow: 2px 4px 3px #e64343e6; 
+  font-style: bold;
+  color: black;
+}
+
+.wardrobe {
+  height: 100%;
+  width: 500px;
+  top: 10%;
+  left: 0;
+  paddding: 15px;
+  border: solid 2px pink;
+  background: url('https://cdn.glitch.com/9ccc0f6f-d102-4075-b50f-038aad016a2f%2Fpink.jpg?v=1590723202560');
+  margin-left: -500px;
+  position: fixed;
+  transition: 0.7s;
+  z-index: 1;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.wardrobe .cloth{
+  margin: 10px;
+  width: 45%;
+  height: 350px;
+  transition: 0.5s;
+}
+
+.wardrobe .cloth:hover {
+  cursor: pointer;
+  border: solid 5px black;
+}
+
+.bodypart .cloth {
+  width: 100%;
+}
+
+.wardrobeDoor {
+  width: 12%;
+  height: 450px;
+  bottom: 15%;
+  position: fixed;
+  left: 0;
+}
+
+.activityArea {
+  height: 100vh;
+  transition: 0.7s;
+  padding-top: 20px;
+  padding-left: 250px;
+  margin-left: 0;
+}
+
+.dressUpArea {
+  margin-left: 250px;
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.figure {
+  width: 250px;
+  height: 500px;
+  top: 0;
+}
+
+.shirt {
+  height: 120px;
+  width: 150px;
+  margin-left: 50px;
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+}
+
+.legwear {
+  height: 220px;
+  width: 110px;
+  margin-left: 70px;
+  position: absolute;
+  top: 220px;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
+
+.resetButton {
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  top: 70%;
+  left: 85%;
+  background: red;
+  padding: 15px;
+  border: 5px solid darkred;
+  border-radius: 50px;
+  color: white;
+}
+
+.resetButton:hover {
+  cursor: pointer;
+  border: 3px solid darkred;
+}
+
+.tuckButton {
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  top: 55%;
+  left: 85%;
+  background: orange;
+  padding: 15px;
+  border: 5px solid darkorange;
+  border-radius: 50px;
+  color: white;
+}
+
+.tuckButton:hover {
+  cursor: pointer;
+  border: 3px solid darkorange;
+}
+
+.saveButton {
+  position: absolute;
+  width: 150px;
+  text-align: center;
+  top: 40%;
+  left: 85%;
+  background: green;
+  padding: 15px;
+  border: 5px solid darkgreen;
+  border-radius: 50px;
+  color: white;
+}
+
+.saveButton:hover {
+  cursor: pointer;
+  border: 3px solid darkgreen;
+}
+
+

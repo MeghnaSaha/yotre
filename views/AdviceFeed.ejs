@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose whom to jazz up today!</title>
+    <link rel="stylesheet" href="/AdviceFeed.css" />
+  </head>
+  <body>
+    <%- include ('../partials/header.ejs') %>
+    <div class='feedArea'>
+      <% for(var i = 0; i < advicePrompts.length; i++){ %>
+        <div class="advicePrompt">
+          <h3>
+            <%= advicePrompts[i].username %>'s call for help!
+          </h3>
+          <p>
+            Occasion: <%= advicePrompts[i].occasion %>
+            <br>
+            <% if(advicePrompts[i].experimenty === 'level1'){ %>
+              Willingness to experiment: None at all
+            <% } %>
+            <% if(advicePrompts[i].experimenty === 'level2'){ %>
+              Willingness to experiment: A tad bit is okay
+            <% } %>
+            <% if(advicePrompts[i].experimenty === 'level3'){ %>
+              Willingness to experiment: A humongous amount
+            <% } %> 
+          </p>
+          <br>
+          <form action="/give-advice" method="post">
+            <input type="hidden" name="username" value="<%= username %>" />
+            <input type="hidden" name="userToHelp" value="<%= advicePrompts[i].username %>" />
+            <input type="hidden" name="occasion" value="<%= advicePrompts[i].occasion %>" />
+            <input type="hidden" name="experimenty" value="<%= advicePrompts[i].experimenty %>" />
+            <input type="submit" class="helpButton" name="help" value="Help <%= advicePrompts[i].username %>!" />
+          </form>
+        </div>
+      <% } %>
+      
+    </div>
+    
+    <script src="/AdviceFeed.js"></script>
+  </body>
+</html>

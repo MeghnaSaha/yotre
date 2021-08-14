@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url(https://cdn.glitch.com/e9ac980a-9531-4dc6-b9c9-b9fc582ade81%2Fwallpaper.jpg?v=1590887233617);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.form {
+  width: 500px;
+  margin: auto; 
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff6f8;
+  border: solid 1px pink;
+  border-radius: 80px;
+  padding: 10px;
+}
