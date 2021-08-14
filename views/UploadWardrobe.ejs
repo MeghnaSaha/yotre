@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Fill Your Wardrobe</title>
+    
+    <link href="/UploadWardrobe.css" rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <%- include ('../partials/header.ejs') %>
+    <div class="uploadArea">
+      <div class='shirt'>
+        <h2>
+          Tops, shirts, blouses, gowns, dresses, kurtis this way!
+        </h2>
+        <form action='/uploadShirt' enctype='multipart/form-data' method='POST'>
+          <input type="hidden" name="username" value="<%= username %>" />
+          <input type='file' name='shirt' accept='image/*' class="filefields">
+          <input type='submit' value='Upload Apparel' class="buttons">
+        </form>
+      </div>
+      <div class="deleteButton" onclick="chooseApparel('<%= username %>')">
+        <p>
+          DELETE APPAREL
+        </p>
+      </div>
+      <div class='legwear'>
+        <h2>
+          Jeans, trousers, shorts, skirts, pyjamas this way!
+        </h2>
+          <form action='/uploadLegWear' enctype='multipart/form-data' method='POST'>
+            <input type="hidden" name="username" value="<%= username %>" />
+            <input type='file' name='legwear' accept='image/*' class="filefields">
+            <input type='submit' value='Upload Apparel' class="buttons">
+        </form>
+      </div>
+    </div>
+    <div class="namePlate">
+      <p>
+        <%= username %>'s Wardrobe
+      </p>
+    </div>
+    <div class="wardrobeDisplay">
+      <% for(var i = 0; i < apparels.length; i++){ %>
+      <img src="data:image/*; base64, <%= apparels[i].image %>" data-type="<%= apparels[i].type %>" data-path="<%= apparels[i].path %>" class="cloth">
+      <% } %>
+    </div>
+    <div class="AskAdviceArea">
+      <p>
+        That's an amazing wardrobe you have there!
+        <br>
+        If you can't decide what goes best with what, let the world figure it out for you!
+      </p>
+      <form action='/ask-advice' method='POST' class="adviceForm">
+          <input type="hidden" name="username" value="<%= username %>" />
+          <label for="purpose">What's the special occasion?</label><br>
+          <input type='text' name='purpose' placeholder="Boss's funeral" required />
+          <p>How much crazy is too crazy, for your outfit choices?</p>
+          <input type="radio" id="level1" name="experimenty" value="level1">
+          <label for="level1">I prefer nothing too out of the box</label><br>
+          <input type="radio" id="level2" name="experimenty" value="level2">
+          <label for="level2">I'd like to experiment a little</label><br>
+          <input type="radio" id="level3" name="experimenty" value="level3">
+          <label for="level3">No amount of crazy can ever be too crazy!</label><br><br>
+          <input type='submit' value='Ask away!' />
+        </form>
+    </div>
+    
+    <script src="/UploadWardrobe.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Architects Daughter', cursive;
+}
+
+body{
+  width: 100vw;
+  height: 10%;
+}
+
+.logo{
+  width: 80px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border: solid 2px pink;
+}
+
+.options{
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: purple;
+  color: white;
+}
+
+.options:hover{
+  cursor: pointer;
+}
+
+.menu{
+  position: fixed;
+  max-width: 250px;
+  top: 10%;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff6f8;
+  border: solid 1px pink;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.menu p{
+  border: solid 1px black;
+  width: 250px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu a {
+  color: purple;
+  font-family: helvetica;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: black;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your fashion, your way!</title>
+    <link rel="stylesheet" href="/UserCharacteristics.css" />
+    <script src="/UserCharacteristics.js"></script>
+  </head>
+  <body>
+    <p>
+      Welcome <%= data.username %>! <br> Tell us more about your charismatic self to customize your fashion voyage!
+    </p>
+    <div class='form'>
+      <form action='/charac-updated' method='POST'>
+        <input type="hidden" name="username" value="<%= data.username %>" />
+        <p>What's your go to clothing size?</p>
+        <input type="radio" id="small" name="size" value="S">
+        <label for="small">XS or S</label><br>
+        <input type="radio" id="medium" name="size" value="M">
+        <label for="medium">M or L</label><br>
+        <input type="radio" id="large" name="size" value="L">
+        <label for="large">XL and beyond</label><br>
+        <p>How tall are you?</p>
+        <input type="radio" id="short" name="height" value="short">
+        <label for="short">Lesser than the average</label><br>
+        <input type="radio" id="average" name="height" value="average">
+        <label for="average">Perfectly average</label><br>
+        <input type="radio" id="tall" name="height" value="tall">
+        <label for="tall">I am towering</label><br>
+        <input type='submit' value='Get Started!' />
+      </form>
+    </div>
+  </body>
+</html>

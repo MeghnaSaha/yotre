@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Let's begin the joyride!</title>
+    <link rel="stylesheet" href="/LoginPage.css" />
+    <script src="/login.js"></script>
+  </head>
+  <body>
+    <img class="logo" src='https://cdn.glitch.com/e9ac980a-9531-4dc6-b9c9-b9fc582ade81%2Fyotrelogo.jpg?v=1591005949816' alt='Yotre Logo'>
+    <div class='forms'>
+      <div class='login' id='login'>
+        <form action='/login-done' method='POST'>
+          <input type='text' name='username' placeholder='Username' required />
+          <input type='password' name='password' placeholder='Password' required />
+          <input type='submit' value='Login' />
+        </form>
+        <p>
+          Don't have an account?
+        </p>
+        <button onclick="showRegister()">Register here!</button>
+      </div>
+      <div class='register' id='register'>
+        <form action='/register-done' method='POST'>
+          <input type='email' name='email' placeholder='E-mail Address' required />
+          <input type='text' name='username' placeholder='Username' required />
+          <% if(!userValid){ %>
+            <p> Username already taken!</p>
+          <% } %>
+          <input type='password' name='password' placeholder='Password' required />
+          <input type='submit' value='Register' />
+        </form>
+        <p>
+          Already have an account?
+        </p>
+        <button onclick="showLogin()">Login here!</button>
+      </div>
+    </div>
+  </body>
+</html>

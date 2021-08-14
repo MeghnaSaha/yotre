@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Make A Look!</title>
+    <link rel="stylesheet" href="/MakeOutfit.css" />
+    <script src="/wardrobeSlide.js" defer></script>
+    <script src="/dragAndDrop.js" defer></script>
+    <script src='https://unpkg.com/html2canvas@1.0.0-rc.5/dist/html2canvas.js'></script>
+  </head>
+  <body>
+    <%- include ('../partials/header.ejs', {username:username}) %>
+    <div class="wardrobe" id="wardrobe" onmouseleave="closeWardrobe()">
+      <% for(var i = 0; i < apparels.length; i++){ %>
+      <img src="data:image/*; base64, <%= apparels[i].image %>" data-type="<%= apparels[i].type %>" data-path="<%= apparels[i].path %>" class="cloth">
+      <% } %>
+    </div>
+    <img
+      class="wardrobeDoor"
+      id="wardrobeDoor"
+      alt="Pull Door"
+      onmouseover="openWardrobe()"
+      src="https://cdn.glitch.com/9ccc0f6f-d102-4075-b50f-038aad016a2f%2Fwardrobe.jpg?v=1590617594473"
+    />
+    <div class="activityArea" id="activityArea" onclick="closeWardrobe()">
+      <h1>Can you make <%= userToHelp %> look like a million bucks?</h1>
+      <div id="dressUpArea" class="dressUpArea">
+        <div> 
+          <img
+            class="figure"
+            src="https://cdn.glitch.com/9ccc0f6f-d102-4075-b50f-038aad016a2f%2Ffemalefigure.png?v=1590619862301"
+            alt="femalefigure"
+          />
+        </div>
+        <div class="bodypart shirt" data-type="shirt"></div>
+        <div class="bodypart legwear" data-type="legwear"></div>
+      </div>
+      <div class="saveButton" id="saveButton" onclick="saveOutfit('<%= username %>', '<%= userToHelp %>')">
+        Save outfit!
+      </div>
+      <div class="tuckButton" id="tuckButton">
+        Tuck shirt in?
+      </div>
+      <div class="resetButton" id="resetButton">
+        Go nude again!
+      </div>
+    </div>
+    
+    <script src="/saveOutfit.js"></script>
+  </body>
+</html>

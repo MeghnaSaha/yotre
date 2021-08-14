@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: lightpink;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.uploadArea {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.shirt {
+  background: lightgreen;
+  border: solid 5px lightblue;
+  border-radius: 50px;
+  
+  height: 40%;
+  padding: 30px;
+  top: 10%;
+  left: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.legwear {
+  background: lightblue;
+  border: solid 5px lightgreen;
+  border-radius: 50px;
+  
+  height: 40%;
+  padding: 30px;
+  top: 10%;
+  left: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 70px;
+  color: black;
+  text-shadow: 2px 4px 3px #e64343e6;
+  font-style: bold;
+}
+
+.wardrobeDisplay {
+  width: 100%;
+  padding: 30px;
+  padding-top: 5px;
+  top: 50%;
+  left: 0;
+  display: flex;
+  overflow: auto;
+}
+
+.buttons {
+  background: #e64343e6;
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 40px;
+}
+
+.buttons:hover {
+  background: pink;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+.filefields {
+  padding: 10px;
+}
+
+.cloth {
+  margin: 5px;
+  border: solid 2px #fff6f8;
+  padding: 10px;
+  height: 280px;
+  transition: 0.5s;
+}
+
+.cloth:hover {
+  padding: 0;
+}
+
+.deleteButton {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  background: red;
+  padding-top: 10px;
+  border: 5px solid darkred;
+  border-radius: 50px;
+  color: white;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+  border: 3px solid darkred;
+}
+
+.namePlate{
+  background: black;
+  color: #fff6f8;
+  font-size: 20px;
+  width: 400px;
+  text-align: center;
+}
+
+.AskAdviceArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff6f8;
+  border: solid 1px pink;
+  border-radius: 60px;
+  padding: 20px;
+  margin: 20px 250px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.adviceForm {
+  background: black;
+  color: #fff6f8;
+  border: solid 1px pink;
+  border-radius: 40px;
+  padding: 40px;
+  font-size: 17px;
+  text-align: left;
+}
